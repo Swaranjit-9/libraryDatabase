@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<meta charset="ISO-8859-1">
+<title>Add your Review</title>
+</head>
+<body>
+<main>
+	<h1>A D D  &nbsp; &nbsp; A &nbsp; &nbsp;  R E V I E W</h1>
+		<form action="#" th:action="@{/add-review}" method="post" th:object="${review}">
+			<input type="hidden" th:field="*{bookId}" th:name="bookid">
+ 			<input type="text" th:field="*{text}" placeholder="How was the book?" th:name="text">
+ 			<br><br>
+ 			<div th:if="${taken==1}" class="error">
+ 			Add a unique review
+ 			</div>
+ 			<br><br>
+			<input type="submit" class="button" value="Add Review">
+		</form>
+		<p><a href="#" th:href="@{/}" id="links"> Back to index</a></p>
+</main>
+</body>
+</html>

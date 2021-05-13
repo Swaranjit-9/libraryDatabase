@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<meta charset="ISO-8859-1">
+<title>Add a Book</title>
+</head>
+<body>
+<main>
+
+<h1>A D D  &nbsp; &nbsp; A &nbsp; &nbsp;  B O O K </h1>
+
+	<form action="#" th:action="@{/add-book}" method="post" th:object="${book}">
+		<input type="text" th:field="*{title}" placeholder="Title" th:name="title"><br><br>
+		<input type="text" th:field="*{author}" placeholder="Author" th:name="author"><br><br>
+		<input type="submit" class="button" value="Add Book">
+	</form>
+	<br><br>
+	
+	<form action="#" th:action="@{/logout}" method="get">
+		<input type="submit" class="button" value="Logout" id="logout">
+	</form>
+	<br>
+	
+	<div class="functions">
+		Back to 
+		<a href="#" th:href="@{/}" id="links">index </a>
+	</div>
+	
+</main>
+</body>
+</html>

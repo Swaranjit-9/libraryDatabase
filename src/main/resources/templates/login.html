@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+<main>
+<br>
+	<h1>S I G N  &nbsp; &nbsp; I N</h1>
+
+		<form action="#" th:action="@{/login}" method="post">
+			<p> <input type="text" name="username" placeholder="Username" /></p>
+			<p> <input type="password" name="password" placeholder="Password"/></p>
+
+		<div th:if="${param.error}" class="error">
+		<p> Invalid credentials</p>
+		</div>
+
+		<div th:if="${param.logout}" class="error">
+		<p> You are now logged out</p>
+		</div>
+
+			<input type="submit" class="button" value="Login" />
+		</form>
+
+		<p class="functions">Not Registered? 
+			<a href="/" th:href="@{/register}" id="links"> Register here</a>
+		</p>
+
+		<p>
+		<a href="#" th:href="@{/}" id="links"> Back to index</a>
+		</p>
+		
+</main>
+</body>
+</html>

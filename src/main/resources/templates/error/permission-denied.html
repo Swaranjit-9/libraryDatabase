@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<meta charset="ISO-8859-1">
+<title>Permission Denied!</title>
+</head>
+<body>
+<main>
+	<h1>You do not have permission to access this page</h1>
+	
+	<div sec:authorize="hasAnyRole('ROLE_USER','ROLE_ADMIN')" class="functions">
+		Return <a href="#" th:href="@{/}" id="links">Home</a>
+	</div>
+	
+	<div sec:authorize="!isAuthenticated()" class="functions">
+		Login <a href="#" th:href="@{/login}" id="links">Here</a>
+	</div>
+	
+</main>
+</body>
+</html>

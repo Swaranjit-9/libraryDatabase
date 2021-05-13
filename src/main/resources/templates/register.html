@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<meta charset="ISO-8859-1">
+<title>Register User</title>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" th:href="@{/css/style.css}" />
+</head>
+<body>
+<main>
+		<h1>S I G N &nbsp; &nbsp;  U P</h1>
+			<div id="error" class="error"></div><br>
+		<div id="taken" th:if="${taken == 1}" th:text="|That username already exists!|" class="error">Username exists</div>
+		<form name="form" action="#" th:action="@{/register-user}" method="post" onsubmit="return verify()">
+			<input type="text" name="userName" placeholder="Username" /><br><br>
+			<input type="password" name="password" placeholder="Password" id="password"><br><br>
+			<input type="submit" class="button" value="Register">
+		</form>
+		
+	<div class="functions">Back to <a href="#" th:href="@{/}" id="links">index</a></div>
+</main>
+</body>
+</html>
