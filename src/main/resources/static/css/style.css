@@ -14,7 +14,7 @@ html,body{
 
 
 .button{
-background-color: #ff80c0; 
+background-color: #8099ff; 
   color: white;
   border-color: white;
   padding: 15px 32px;
@@ -32,7 +32,7 @@ background-color: #ff80c0;
 .button:hover {opacity: 1}
 
 #logout{
-	background-color: #f7a8e9;
+	background-color: #8099ff;
 	width:20%;
 }
 
@@ -102,7 +102,7 @@ th{
   text-align: left;
   font-family: 'Work Sans', sans-serif;
   border-bottom: 1px solid #ddd;
-  background-color: #f7a8e9;;
+  background-color: #8099ff;;
   color: white;
 }
 
