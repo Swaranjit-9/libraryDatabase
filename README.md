@@ -4,8 +4,9 @@
 A spring boot app to review the books read by students and fellow friends from the library. 
 
 The Implements Spring authentication, security and role-based permissions.
-Admin can list all the books (all crud functionality) which are available in the library and each user can register and leave a review on the book they have raed.
-(Admin: bugs, pass: bunny) 
+Admin can list all the books (all crud functionality) which are available in the library. (Admin: bugs, pass: bunny) 
+Each user can register and leave a review on the book they have raed. 
+
 
 ## Screenshots
 ### Index Page
